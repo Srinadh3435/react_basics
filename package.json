@@ -1,0 +1,25 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "namaste react episode 2",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srinadh3435/react_basics.git"
+  },
+  "author": "srinadh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Srinadh3435/react_basics/issues"
+  },
+  "homepage": "https://github.com/Srinadh3435/react_basics#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}

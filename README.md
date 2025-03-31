@@ -88,3 +88,104 @@ A framework provides a complete structure for building applications, including:
 ✅ Developers must follow the framework’s rules and conventions.
 
 🔹 Example: Next.js (a React framework) provides server-side rendering (SSR), file-based routing, and API handling—all built-in.
+
+## Day-2 version-1
+1.  What is npm?
+A.    
+    npm behaves as a package manager for node modules. 
+    It acts as a repository for many node modules
+
+2. How to configure npm in the project?
+A.
+    Using command npm init
+    It gives few prompts to answer like 
+    - package manager
+    - version
+    - description (can give anything)
+    - entry point (default set as App.js)
+    - test command - jest (to be provided)
+    - git repository (to be confirmed by us for git origin)
+    - keywords (not mandatory)
+    - author name
+    - license: ISC (no change required, default)
+    - few other details like url and homepage
+
+    -- Finally, it gives a package.json file with this configuration details.
+
+3. What is this package.json and why is it required?
+A.
+    packages are nothing but dependencies. So this json file tracks the version details and other project details here.
+
+4. Name the most important dependeency for using React.
+A.  Bundler is the most important dependency.
+    Most common and highly used Bundlers are Webpack, Parcel and Vite.
+    Any bundler can be installed using npm, it can be installed by a common command
+
+    npm install -D parcel # The required bundler can be replaced with Parcel
+    Here we are using Parcel.
+
+Note: -D is the type of dependency being installed.
+There are 2 types of dependencies while using:
+i. Dev dependency(gives more checks and error verification)
+ii. Normal dependency (mostly used for production)
+---------------------------------
+Now when we install parcel in our application we got super powers of Parcel and nodemodules folder along with packagelock.json is formed in our project.
+---------------------------------
+5. What is package-lock.json and how different is it from normal package.json file.
+A.  The package.json stores the approximate version of the dependency without exact value being used.
+
+    The package-lock.json stores the exact version value of the dependency without any carat or tilde infront of the version such as present in package.json.
+
+6. Whhat is the carat(^) or tilde(~) present infront of version value in package.json?
+A.
+    ^ => If carat is present before the version value of then the dependency will automatically upgrade the dependency if it has any minor update.
+
+    ~ => If tilde is present before the version value of then the dependency will automatically upgrade the dependency even if it has any najor update.
+
+7. Why we have huge node_modules?
+A.  We have huge node_modules due to transitive dependencies. 
+    Ex: Now we installed parcel but parcel in built has few other dependencies to work, and similarly those parcel dependencies will have few other dependencies. This is transitive dependency and main reason for huge node modules.
+
+8. Should we push all the node modules into our git along with package and package-lock.json files?
+A.  No, we can generate the node modules files with the package and package-lock files. But the later two are very important.
+Note: We can keep the node modules in .gitignore file in ourproject to exempt them from pushing those files.
+------------------------------------------
+Now, we will ignite the application with bundler, react library and other requirements
+
+- Run the command,  npx Parcel index.html
+The above command installs Parcel  which runs on local server and hosts our website over it.
+- It also does many things for our application
+
+9. What is difference between npm and npx?
+A.  npm is like installing the required packages globally or locally and then using it. But, npx on other side directly uses the package without installing it locally.
+------------------------------------------
+Note: Using CDN links for using React is not a preferable way, so we can use React by installing it locally and importing it.
+
+For installng the React library, give the below command.
+    npm install react
+    npm install react-dom
+Now we have react installed but we need to import the react after removing the CDN links.
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+But still this gives us an error as 'Browser Scripts cannot have imports'
+This is due to App.js being used as an script in 'index.html'. So now make the type as 'module' which can remove this error.
+
+Uses of Parcel:
+-   DevBuild
+-   Local server 
+-   HMR (Hot module replacement)
+-   File watching algorithm (this is used to track all the changes made in files to do HMR on the server)
+-   Caching (it caches for faster build, '.parcel-cache' is created for the first build and caches on each build to give faster builds)
+-   Image optimization
+-   Minnification
+-   Bundling
+-   Consistent hashing
+-   Differntial bundling (supports for older version of browsers)
+-   chances to host on HTTPs
+-   Beautiful Diagnostics (like giving clear errors for error handling)
+
+To make the code production ready we need to get prod build. It is generated using the below command
+
+npx Parcel build index.html
+
+This gives only 1 file each for HTML, CSS and JS and completely minnified with code. This bundling of files along with minnification is done by Parcel.
