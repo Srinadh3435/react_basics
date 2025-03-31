@@ -1,6 +1,6 @@
 # Namaste-React
 
-## version_1
+## Day-1 version-1
 -- rendered Namaste HTML using h1 tag
 -- rendered Namaste JavaScript using script tag
 -- React CDN links attached into the file
@@ -14,7 +14,7 @@
     - Can we use any CDN links (development vs production)? 
     - what is render() method in React?
 
-## version_2
+## Day-1 version-2
 -- updated the react component as a nested element in parent div-> child div-> h1
 -- then again updated it as below using array of items in third value of creating component
 --------
@@ -124,7 +124,7 @@ A.  Bundler is the most important dependency.
     npm install -D parcel # The required bundler can be replaced with Parcel
     Here we are using Parcel.
 
-Note: -D is the type of dependency being installed.
+Note: '-D' is the type of dependency being installed.
 There are 2 types of dependencies while using:
 i. Dev dependency(gives more checks and error verification)
 ii. Normal dependency (mostly used for production)
