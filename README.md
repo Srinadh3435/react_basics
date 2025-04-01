@@ -189,3 +189,39 @@ To make the code production ready we need to get prod build. It is generated usi
 npx Parcel build index.html
 
 This gives only 1 file each for HTML, CSS and JS and completely minnified with code. This bundling of files along with minnification is done by Parcel.
+
+
+## Day-3 version-1
+------------------------------------
+1. What are npm scripts?
+A.  In package.json we can find a JSON object called scripts which is used to simplify tasks like running the application start, build etc..
+
+Example Script:
+
+package.json
+``` JSON
+    - "scripts":
+    {
+        "start" : "parcel index.html",
+        "build" : "parcel build index.html",
+        "test" : "jest"
+    }
+```
+
+2.  What is JSX?
+A.  JSX is a syntax extension of JavaScript which feels like HTML inside JavaScript.
+This is not a JavaScript code which could be run by JavaScript engine.
+
+JSX is transpiled into JavaScript by Babel which in turn gets governed by Parcel.
+
+3. What is a React Element and React Component?
+
+React element is a normal jS object or variable which gets assigned with JSX object and cannot be changed dynamically, which gets rendered.
+React Component is a functional or class component which gets rendered and can be changed over the time using state variables.
+
+React element is created using React.createElement or JSX 
+Reac Components are created using functional or class methods
+
+React elemnet can be directly passed to render method as 'root.render(element)'
+React Components are passed as components to the render method using 'root.render(<Element />)'. This is one of the way and the other methods include <Element><Element />(If it has child elements/components), calling the element as a function if it is a functional component '{Element()}'. hence there are ,ultiple ways to call the components. 
+

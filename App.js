@@ -13,5 +13,15 @@ const heading = React.createElement(
   ])]
 );
 
+const jsxHeading = (
+  <div id="aprent">
+    <div id="child_1">
+      <h2>I'm an h2 tag in child element 1</h2>
+    </div>
+    <div id="child_2">
+      <h2>I'm an h2 tag in child element 2</h2>
+    </div>    
+  </div>
+)
 const root = ReactDOM.createRoot(document.getElementById("reactRoot"));
-root.render(heading);
+root.render(jsxHeading);
