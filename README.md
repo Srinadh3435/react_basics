@@ -200,7 +200,7 @@ Example Script:
 
 package.json
 ``` JSON
-    - "scripts":
+    "scripts":
     {
         "start" : "parcel index.html",
         "build" : "parcel build index.html",
@@ -223,5 +223,5 @@ React element is created using React.createElement or JSX
 Reac Components are created using functional or class methods
 
 React elemnet can be directly passed to render method as 'root.render(element)'
-React Components are passed as components to the render method using 'root.render(<Element />)'. This is one of the way and the other methods include <Element><Element />(If it has child elements/components), calling the element as a function if it is a functional component '{Element()}'. hence there are ,ultiple ways to call the components. 
+React Components are passed as components to the render method using 'root.render(<Element />)'. This is one of the way and the other methods include <Element><Element />(If it has child elements/components), calling the element as a function if it is a functional component '{Element()}'. Hence there are ,ultiple ways to call the components. 
 
